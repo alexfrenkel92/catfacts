@@ -9,21 +9,19 @@
             {{ breed.description }}
         </p>
         <p class="url">
-            <a v-bind:href="link">Click for more details</a>
+            <a v-bind:href="this.breed.wikipedia_url">Click for more details</a>
         </p>
         <hr />
     </div>
 </template>
 
-<script>
-export default {
-    props: ["breed"],
-    data() {
-        return {
-            link: this.breed.wikipedia_url,
-        };
-    },
-};
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
+
+@Component
+export default class Breed extends Vue {
+    @Prop() breed: any;
+}
 </script>
 
 <style scoped>

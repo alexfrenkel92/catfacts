@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../components/pages/movies/Home.vue';
+import Home from '../components/pages/home/Home.vue';
 import Categories from '../components/pages/breeds/Categories.vue';
-import Randomizer from '../components/pages/catfacts/Randomizer.vue';
+import RandomCatfacts from '../components/pages/catfacts/RandomCatfacts.vue';
 
 Vue.use(VueRouter)
 
@@ -18,9 +18,9 @@ Vue.use(VueRouter)
     component: Categories
   },
   {
-    path: '/randomizer',
-    name: 'Randomizer',
-    component: Randomizer
+    path: '/catfacts',
+    name: 'RandomCatfacts',
+    component: RandomCatfacts
   }
 ]
 

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <p class="catfact-header">Get random cat facts by pressing the button below</p>
+        <p class="catfact-header">Get random catfacts by pressing the button below</p>
         <hr><br />
         <div class="d-flex justify-content-center">
             <button class="btn btn-primary" v-on:click="getCatfact">{{ btnText }}</button>
@@ -20,7 +20,7 @@ import Catfact from './Catfact.vue';
         'app-catfact': Catfact
     }
 })
-export default class Randomizer extends Vue {
+export default class RandomCatfacts extends Vue {
     catfact = '';
     btnText = 'Give me one';
 
@@ -29,7 +29,6 @@ export default class Randomizer extends Vue {
     }
     
     mounted() {
-        console.log('Randomizer loaded');
         this.$store.dispatch('fetchCatfacts')
     }
     getCatfact() {

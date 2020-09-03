@@ -9,8 +9,8 @@
                     <router-link to="/categories" activeClass="active" class="nav-item nav-link" tag="li">
                         <a>Categories</a>
                     </router-link>
-                    <router-link to="/randomizer" activeClass="active" class="nav-item nav-link" tag="li">
-                        <a>Randomizer</a>
+                    <router-link to="/catfacts" activeClass="active" class="nav-item nav-link" tag="li">
+                        <a>Catfacts</a>
                     </router-link>
                 </ul>
             </div>

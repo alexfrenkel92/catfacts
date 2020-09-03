@@ -1,34 +1,33 @@
 <template>
     <div class="container">
-        <p class="ghibli">Cat breeds</p><hr>
+        <p class="ghibli">List of all cat breeds</p>
+        <hr />
         <div class="row">
             <div class="col-md-auto">
-                <p>Categories page</p>
-                    <!-- <app-breed 
-                    v-for="breed in breeds" 
-                    v-bind:key="breed.id" 
-                    v-bind:breed="breed"></app-breed> -->
+                <app-breed v-for="breed in breeds" v-bind:key="breed.id" v-bind:breed="breed"></app-breed>
             </div>
         </div>
     </div>
 </template>
 
-<script>
-// import Breed from "./Breed.vue";
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import Breed from "./Breed.vue";
 
-// export default {
-//     components: {
-//         "app-breed": Breed,
-//     },
-//     mounted() {
-//         this.$store.dispatch("fetchBreeds");
-//     },
-//     computed: {
-//         breeds() {
-//             return this.$store.state.breeds;
-//         },
-//     },
-// };
+@Component({
+    components: {
+        "app-breed": Breed,
+    },
+})
+export default class Categories extends Vue {
+    get breeds() {
+        return this.$store.state.breeds;
+    }
+
+    mounted() {
+        this.$store.dispatch("fetchBreeds");
+    }
+}
 </script>
 
 <style scoped>

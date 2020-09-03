@@ -1,17 +1,17 @@
 <template>
     <div class="container">
             <!-- <app-movies></app-movies> -->
-            <Movies />
+            <app-cats></app-cats>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
-import Movies from "./Movies.vue";
+import Cats from "./Cats.vue";
 
 @Component({
     components: {
-        Movies
+        'app-cats': Cats
     }
 })
 

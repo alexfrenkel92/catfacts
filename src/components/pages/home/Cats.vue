@@ -25,11 +25,11 @@
 import { Component, Vue, Prop } from "vue-property-decorator";
 import {GetterTree, MutationTree, ActionTree} from "vuex";
 
-import Movie from "./Movie.vue";
+// import Movie from "./Movie.vue";
 
 @Component({
     components: {
-        Movie
+        
     }
 })
 

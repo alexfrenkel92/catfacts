@@ -9,7 +9,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class Catfact extends Vue {
-    @Prop() readonly catfact: string;
+    @Prop() catfact: any;
 }
 </script>
 
