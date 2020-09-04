@@ -8,9 +8,12 @@
             <span>Description:</span>
             {{ breed.description }}
         </p>
-        <p class="url">
+        <button class="btn btn-primary">
+
             <a v-bind:href="this.breed.wikipedia_url">Click for more details</a>
-        </p>
+        </button>
+        <!-- <p class="url">
+        </p> -->
         <hr />
     </div>
 </template>
@@ -29,13 +32,16 @@ export default class Breed extends Vue {
     margin: 0;
     padding: 5px 5px 5px 0;
 }
-.url {
-    cursor: pointer;
-    border: 1px solid;
-    border-radius: 3px;
+.btn {
+    border: 2px solid #e74d3cb9;
+    border-radius: 5px;
     width: fit-content;
-    background-color: rgb(252, 252, 207);
+    background-color: rgb(248, 243, 220);
     padding: 3px 6px;
+    color: black;
+}
+.btn:hover {
+    background-color: #e74c3c;
 }
 a:link {
   color: black;

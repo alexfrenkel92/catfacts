@@ -39,4 +39,7 @@ export default class Categories extends Vue {
 body {
     margin-bottom: 30px;
 }
+.col-md-auto {
+    width: 100%;
+}
 </style>

@@ -88,17 +88,21 @@ export default class Catdetails extends Vue {
 }
 .list-group-item {
     padding: 0 15px 15px 15px;
+    background-color: rgb(247, 244, 231);
 }
 span {
     font-weight: 500;
 }
 .btn {
-    border: 1px solid;
-    border-radius: 3px;
+    border: 2px solid #e74d3cb9;
+    border-radius: 5px;
     width: fit-content;
-    background-color: rgb(252, 252, 207);
+    background-color: rgb(248, 243, 220);
     padding: 3px 6px;
     color: black;
+}
+.btn:hover {
+    background-color: #e74c3c;
 }
 
 .url {

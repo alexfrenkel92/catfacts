@@ -25,5 +25,7 @@ export default class App extends Vue {}
 <style lang="scss">
 body {
     overflow-y: scroll;
+    font-family: "PT Sans", Arial, Verdana;
+    background-color: rgb(247, 244, 231);
 }
 </style>
