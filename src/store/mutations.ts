@@ -1,11 +1,11 @@
-export const FETCH_MOVIES = (state: any, movies: any) => {
-    state.movies = movies;
+export const FETCH_RANDOM_BREEDS = (state: any, randomBreeds: []) => {
+    state.randomBreeds = randomBreeds;
 }
 
-export const FETCH_CATFACTS = (state: any, catfacts: any) => {
+export const FETCH_CATFACTS = (state: any, catfacts: []) => {
     state.catfacts = catfacts;
 }
 
-export const FETCH_BREEDS = (state: any, breeds: any) => {
+export const FETCH_BREEDS = (state: any, breeds: []) => {
     state.breeds = breeds;
 }

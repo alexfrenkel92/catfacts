@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="col-md-auto">
         <p class="breed">
             <span>Breed name:</span>
             {{ breed.name }}

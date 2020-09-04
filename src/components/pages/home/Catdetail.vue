@@ -2,25 +2,51 @@
     <div>
         <router-link
             v-if="hideDetails"
-            v-bind:to="{ params: { id: movie.id } }"
+            v-bind:to="{ params: { id: breed.id } }"
             tag="li"
             class="list-group-item"
-            style="cursor: pointer">
-            <p class="movies" v-on:click="hideDetails = !hideDetails">
-                {{ movie.title }} ({{ movie.release_date }})</p>
+            style="cursor: pointer"
+        >
+            <p class="movies" v-on:click="hideDetails = !hideDetails">{{ breed.name }}</p>
         </router-link>
         <template v-else>
             <div class="container">
-                <p class="movie-title">Movie details</p>
+                <p class="movie-title">Breed details</p>
                 <div class="row">
                     <div class="col-md-auto list-group-flush">
                         <ul class="list-group">
-                            <li class="list-group-item"><span>Title: </span>{{ movie.title }}</li>
-                            <li class="list-group-item"><span>Description: </span>{{ movie.description }}</li>
-                            <li class="list-group-item"><span>Director: </span>{{ movie.director }}</li>
-                            <li class="list-group-item"><span>Producer: </span>{{ movie.producer }}</li>
-                            <li class="list-group-item"><span>Release date: </span>{{ movie.release_date }}</li>
-                            <li class="list-group-item"><span>Score: </span>{{ movie.rt_score }}</li>
+                            <li class="list-group-item">
+                                <span>Name:</span>
+                                {{ breed.name }}
+                            </li>
+                            <li class="list-group-item">
+                                <span>Origin:</span>
+                                {{ breed.origin }}
+                            </li>
+                            <li class="list-group-item">
+                                <span>Lifespan:</span>
+                                {{ breed.life_span }}
+                            </li>
+                            <li class="list-group-item">
+                                <span>Temperament:</span>
+                                {{ breed.temperament }}
+                            </li>
+                            <li class="list-group-item">
+                                <span>Weight:</span>
+                                {{ breed.weight.metric }}kg
+                            </li>
+                            <li class="list-group-item">
+                                <span>Dog friendliness (0 - 5):</span>
+                                {{ breed.dog_friendly }}
+                            </li>
+                            <li class="list-group-item">
+                                <span>
+                                    <a
+                                        class="url"
+                                        v-bind:href="breed.wikipedia_url"
+                                    >Click for more details</a>
+                                </span>
+                            </li>
                         </ul>
                         <button
                             v-on:click="hideDetails = !hideDetails"
@@ -35,20 +61,19 @@
     </div>
 </template>
 
-<script>
-export default {
-    props: ["movie"],
-    data() {
-        return {
-            hideDetails: true,
-        };
-    },
-    methods: {
-        turnOnDetails() {
-            this.hideDetails = true;
-        },
-    },
-};
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component
+export default class Catdetails extends Vue {
+    hideDetails = true;
+    
+    @Prop() breed: any;
+
+    turnOnDetails() {
+        this.hideDetails = true;
+    }
+}
 </script>
 
 <style scoped>
@@ -61,6 +86,9 @@ export default {
     margin: 0;
     padding: 5px 5px 5px 0;
 }
+.list-group-item {
+    padding: 0 15px 15px 15px;
+}
 span {
     font-weight: 500;
 }
@@ -71,5 +99,20 @@ span {
     background-color: rgb(252, 252, 207);
     padding: 3px 6px;
     color: black;
+}
+
+.url {
+    cursor: pointer;
+}
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
 }
 </style>

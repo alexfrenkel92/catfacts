@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar fixed-bottom center navbar-light bg-light">
+    <nav class="navbar fixed-bottom center navbar-light">
         <a class="navbar-brand" href="#">Sitemap</a>
     </nav>
 </template>
@@ -15,15 +15,13 @@ export default {};
     color: rgb(27, 26, 26);
     text-decoration: none;
 }
-.fixed-bottom {
-    background-color: blue;
-    align-content: center;
-    color: red
-}
 .navbar.center {
-    text-align: center;
     display:inline-block;
+    text-align: center;
+    align-content: center;
     float: none;
+    background-color: gainsboro;
+    height: 40px;
 }
 </style>
     

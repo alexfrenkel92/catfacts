@@ -7,7 +7,6 @@
         </div>
         <br />
         <app-catfact v-bind:catfact="catfact"></app-catfact>
-        <!-- <app-catfact v-bind:catfact="catfact"></app-catfact> -->
     </div>
 </template>
 
@@ -26,13 +25,12 @@ export default class RandomCatfacts extends Vue {
 
     get catfacts() {
         return this.$store.state.catfacts;
-    }
-    
+    }  
     mounted() {
         this.$store.dispatch('fetchCatfacts')
     }
     getCatfact() {
-        const randomNr = Math.floor(Math.random() * (this.catfacts.all.length - 1)) + 1;
+        const randomNr: number = Math.floor(Math.random() * (this.catfacts.all.length - 1)) + 1;
         this.catfact = this.catfacts.all[randomNr].text;
         this.btnText = "Another one";
     }
@@ -54,5 +52,9 @@ export default class RandomCatfacts extends Vue {
     color: black;
     box-shadow: none;
 }
-
+.btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  box-shadow: none;
+}
 </style>
