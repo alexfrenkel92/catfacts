@@ -1,6 +1,8 @@
 <template>
     <nav class="navbar fixed-bottom center navbar-light">
-        <a class="navbar-brand" href="#">Sitemap</a>
+        <router-link to="/sitemap" activeClass="active" class="nav-item navbar-brand nav-link">
+            <a>Sitemap</a>
+        </router-link>
     </nav>
 </template>
 

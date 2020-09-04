@@ -7,7 +7,7 @@
             class="list-group-item"
             style="cursor: pointer"
         >
-            <p class="movies" v-on:click="hideDetails = !hideDetails">{{ breed.name }}</p>
+            <p class="breeds" v-on:click="hideDetails = !hideDetails">{{ breed.name }}</p>
         </router-link>
         <template v-else>
             <div class="container">
@@ -82,7 +82,7 @@ export default class Catdetails extends Vue {
     margin: 0;
     font-weight: 500;
 }
-.movies {
+.breeds {
     margin: 0;
     padding: 5px 5px 5px 0;
 }
