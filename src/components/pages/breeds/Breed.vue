@@ -33,7 +33,7 @@ export default class Breed extends Vue {
     padding: 5px 5px 5px 0;
 }
 .btn {
-    border: 2px solid #e74d3cb9;
+    border: 1px solid #e74d3cb9;
     border-radius: 5px;
     width: fit-content;
     background-color: #e74d3cb9;

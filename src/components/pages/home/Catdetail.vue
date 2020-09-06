@@ -94,7 +94,7 @@ span {
     font-weight: 500;
 }
 .btn {
-    border: 2px solid #e74d3cb9;
+    border: 1px solid #e74d3cb9;
     border-radius: 5px;
     width: fit-content;
     background-color: #e74d3cb9;
