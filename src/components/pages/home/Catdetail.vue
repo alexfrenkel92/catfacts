@@ -97,7 +97,7 @@ span {
     border: 2px solid #e74d3cb9;
     border-radius: 5px;
     width: fit-content;
-    background-color: rgb(248, 243, 220);
+    background-color: #e74d3cb9;
     padding: 3px 6px;
     color: black;
 }
