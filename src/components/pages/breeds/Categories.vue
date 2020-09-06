@@ -1,8 +1,13 @@
 <template>
     <div class="container">
-        <p class="catbreeds">List of all cat breeds</p>
+        <p class="catbreeds">
+            List of all cat breeds
+            <span class="search">
+                <img src="../../../static/search.svg" width="40" height="25">
+                <input v-model="filterText" size="7"/>
+            </span>
+        </p>
         <hr />
-        <input v-model="filterText" />
         <div class="row">
             <div class="col-md-auto">
                 <Breed v-for="breed in searchForBreed" v-bind:key="breed.id" v-bind:breed="breed" />
@@ -22,8 +27,8 @@ import Breed from "./Breed.vue";
     },
 })
 export default class Categories extends Vue {
-    filterText = '';
-    filteredBreedMethod = []
+    filterText = "";
+    filteredBreedMethod = [];
 
     mounted() {
         this.$store.dispatch("fetchBreeds");
@@ -32,9 +37,13 @@ export default class Categories extends Vue {
         return this.$store.state.breeds;
     }
     get searchForBreed() {
-        const search = this.filterText.toLowerCase().trim();
-        if (!search) return this.breeds;
-        return this.breeds.filter(b => b.name.toLowerCase().indexOf(search) > -1)
+        const result = this.filterText.toLowerCase().trim();
+        if (!result) {
+            return this.breeds;
+        } else
+            return this.breeds.filter(
+                (breed) => breed.name.toLowerCase().indexOf(result) > -1
+            );
     }
 }
 </script>
@@ -45,6 +54,14 @@ export default class Categories extends Vue {
     padding-left: 8px;
     margin: 0;
     font-weight: 500;
+}
+.search {
+    float: right;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid;
+    font-size: 17px;
 }
 body {
     margin-bottom: 30px;
