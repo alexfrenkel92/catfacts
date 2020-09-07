@@ -27,6 +27,10 @@ Vue.use(VueRouter)
     path: '/sitemap',
     name: 'Sitemap',
     component: Sitemap
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
