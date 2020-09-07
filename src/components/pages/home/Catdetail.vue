@@ -11,7 +11,7 @@
         </router-link>
         <template v-else>
             <div class="container">
-                <p class="movie-title">Breed details</p>
+                <p class="breed-title">Breed details</p>
                 <div class="row">
                     <div class="col-md-auto list-group-flush">
                         <ul class="list-group">
@@ -45,6 +45,7 @@
                                         class="url"
                                         v-bind:href="breed.wikipedia_url"
                                     >Click for more details</a>
+                                    <img src="../../../static/cursor.svg" width="40" height="23">
                                 </span>
                             </li>
                         </ul>
@@ -76,10 +77,10 @@ export default class Catdetails extends Vue {
 </script>
 
 <style scoped>
-.movie-title {
+.breed-title {
     font-size: 20px;
     margin: 0;
-    font-weight: 500;
+    font-weight: bold;
 }
 .breeds {
     margin: 0;
@@ -89,9 +90,9 @@ export default class Catdetails extends Vue {
     padding: 0 15px 15px 15px;
     background-color: rgb(247, 244, 231);
 }
-span {
+/* span {
     font-weight: bold;
-}
+} */
 .btn {
     border: 1px solid #e74d3cb9;
     border-radius: 5px;
