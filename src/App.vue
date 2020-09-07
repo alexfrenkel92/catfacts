@@ -2,7 +2,7 @@
     <div class="container">
         <Header />
         <keep-alive>
-            <router-view :key="$route.fullPath"></router-view>
+            <router-view v-bind:key="$route.fullPath"></router-view>
         </keep-alive>
         <Footer />
     </div>
