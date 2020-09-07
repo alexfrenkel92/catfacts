@@ -60,7 +60,6 @@ a {
     padding-left: 10px;
     color: palegoldenrod;
     text-decoration: none;
-    /* border: 5px solid #e74c3c; */
 }
 .navbar-expand-lg {
     margin: 0 0 10px 0;

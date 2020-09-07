@@ -12,8 +12,6 @@
 
             <a v-bind:href="this.breed.wikipedia_url">Click for more details</a>
         </button>
-        <!-- <p class="url">
-        </p> -->
         <hr />
     </div>
 </template>
@@ -56,6 +54,6 @@ a:hover {
   text-decoration: none;
 }
 span {
-    font-weight: 500;
+    font-weight: bold;
 }
 </style>

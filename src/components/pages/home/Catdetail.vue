@@ -66,12 +66,11 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class Catdetails extends Vue {
-    hideDetails = true;
-    
     @Prop() breed: any;
+    hideDetails = true;
 
     turnOnDetails() {
-        this.hideDetails = true;
+        this.hideDetails = false;
     }
 }
 </script>
@@ -91,7 +90,7 @@ export default class Catdetails extends Vue {
     background-color: rgb(247, 244, 231);
 }
 span {
-    font-weight: 500;
+    font-weight: bold;
 }
 .btn {
     border: 1px solid #e74d3cb9;
