@@ -12,6 +12,7 @@
                         data-toggle="dropdown"
                         aria-haspopup="true"
                         aria-expanded="false"
+                        alt="filter icon"
                     />
                     <div class="dropdown-menu dropdown-menu-right">
                         <button class="dropdown-item" type="button" v-on:click="orderAsc">Ascending</button>

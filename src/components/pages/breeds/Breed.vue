@@ -9,7 +9,6 @@
             {{ breed.description }}
         </p>
         <button class="btn btn-primary">
-
             <a v-bind:href="this.breed.wikipedia_url">Click for more details</a>
         </button>
         <hr />

@@ -1,14 +1,15 @@
 <template>
     <div>
-        <router-link
-            v-if="hideDetails"
-            v-bind:to="{ params: { id: breed.id } }"
-            tag="li"
-            class="list-group-item"
-            style="cursor: pointer"
-        >
-            <p class="breeds" v-on:click="hideDetails = !hideDetails">{{ breed.name }}</p>
-        </router-link>
+        <ul v-if="hideDetails" class="list-group">
+            <router-link
+                v-bind:to="{ params: { id: breed.id } }"
+                tag="li"
+                class="list-group-item"
+                style="cursor: pointer"
+            >
+                <p class="breeds" v-on:click="hideDetails = !hideDetails">{{ breed.name }}</p>
+            </router-link>
+        </ul>
         <template v-else>
             <div class="container">
                 <p class="breed-title">Breed details</p>
@@ -45,7 +46,12 @@
                                         class="url"
                                         v-bind:href="breed.wikipedia_url"
                                     >Click for more details</a>
-                                    <img src="../../../static/cursor.svg" width="40" height="23">
+                                    <img
+                                        src="../../../static/cursor.svg"
+                                        width="40"
+                                        height="23"
+                                        alt="cursor"
+                                    />
                                 </span>
                             </li>
                         </ul>
@@ -90,9 +96,6 @@ export default class Catdetails extends Vue {
     padding: 0 15px 15px 15px;
     background-color: rgb(247, 244, 231);
 }
-/* span {
-    font-weight: bold;
-} */
 .btn {
     border: 1px solid #e74d3cb9;
     border-radius: 5px;

@@ -2,7 +2,6 @@
     <div class="sticky-top">
         <span class="decor"></span>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- <a class="navbar-brand">Navbar</a> -->
             <button
                 class="navbar-toggler"
                 type="button"

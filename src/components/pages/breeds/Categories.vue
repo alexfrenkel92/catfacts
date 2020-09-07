@@ -3,7 +3,7 @@
         <p class="catbreeds">
             List of all cat breeds
             <span class="search">
-                <img src="../../../static/search.svg" width="40" height="25">
+                <img src="../../../static/search.svg" width="40" height="25" alt="search icon">
                 <input v-model="filterText" size="7"/>
             </span>
         </p>
