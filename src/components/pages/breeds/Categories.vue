@@ -4,7 +4,7 @@
             List of all cat breeds
             <span class="search">
                 <img src="../../../static/search.svg" width="40" height="25" alt="search icon">
-                <input v-model="filterText" size="7"/>
+                <input v-model="filterText"/>
             </span>
         </p>
         <hr />
@@ -62,11 +62,18 @@ input {
     border-radius: 5px;
     border: 1px solid;
     font-size: 17px;
+    width: 140px;
+    padding-left: 7px;
 }
 body {
     margin-bottom: 30px;
 }
 .col-md-auto {
     width: 100%;
+}
+@media screen and (max-width: 500px) {
+    input {
+        width: 70px;
+    }
 }
 </style>
