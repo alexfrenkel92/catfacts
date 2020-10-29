@@ -1,4 +1,5 @@
-# dtt-testapp
+The app is written in VueJs.
+Deployed: https://catfacts-dtt.herokuapp.com/
 
 ## Project setup
 ```
